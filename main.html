@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./labs2.js"></script>
+    <link rel="stylesheet" href="./labs2.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="btn" class="btn btn-dark">Add</button>
+      <div
+        class="modal fade"
+        id="addmodel"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modelTitleId"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="Name">Product Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Name"
+                  id="Name"
+                  aria-describedby="helpId"
+                  placeholder="Please enter name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Price">Product Price</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name=" Price"
+                  id="Price"
+                  aria-describedby="helpId"
+                  placeholder="Please enter price"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Description">Notes</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Description"
+                  id="Description"
+                  aria-describedby="helpId"
+                  placeholder="Enter important instructions"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Exit
+              </button>
+              <button type="button" id="save" class="btn btn-dark">
+                Save and Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="recipes"></div>
+    </div>
+    <div
+      class="modal fade"
+      id="updatemodle"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">update Item</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="updateId" /> <br />
+            <div class="form-group">
+              <label for="UpdateName">Product Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="UpdateName"
+                id="UpdateName"
+                aria-describedby="helpId"
+                placeholder="Please enter name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="UpdatePrice">Product Price</label>
+              <input
+                type="text"
+                class="form-control"
+                name=" UpdatePrice"
+                id="UpdatePrice"
+                aria-describedby="helpId"
+                placeholder="Please enter price"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="UpdateDescription">Notes</label>
+              <input
+                type="text"
+                class="form-control"
+                name="UpdateDescription"
+                id="UpdateDescription"
+                aria-describedby="helpId"
+                placeholder="Enter Important instructions"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Exit
+            </button>
+            <button type="button" id="UpdatedSave" class="btn btn-primary">
+              Save and Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
